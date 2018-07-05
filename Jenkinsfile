@@ -1,10 +1,10 @@
 node('docker-slave') {
     properties([
         parameters([
-            string(defaultValue: '3.9.32-1', description: 'origin version', name: 'VERSION'),
-            string(defaultValue: 'getupcloud/origin-ansible', description: 'openshift-ansible version', name: 'PREFIX'),
-            string(defaultValue: 'v3.9', description: 'openshift-ansible version', name: 'OS_TAG'),
-            string(defaultValue: 'v3.9', description: 'openshift-ansible version', name: 'OS_PUSH_TAG'),
+            string(defaultValue: '3.9.32-1', description: 'Origin version', name: 'VERSION'),
+            string(defaultValue: 'getupcloud/origin-ansible', description: 'Repositoty name', name: 'PREFIX'),
+            string(defaultValue: 'v3.9', description: 'Local tag name', name: 'OS_TAG'),
+            string(defaultValue: 'v3.9', description: 'Remote tag name', name: 'OS_PUSH_TAG'),
         ]),
     ])
     ansiColor('xterm') {
