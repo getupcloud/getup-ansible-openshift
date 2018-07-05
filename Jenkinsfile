@@ -5,7 +5,7 @@ node('docker-slave'){
       parameters(
         [
             string(defaultValue: '3.9.32-1', description: 'origin version', name: 'VERSION'),
-            string(defaultValue: 'getupimagebuilder/getupcloud/origin-ansible', description: 'openshift-ansible version', name: 'PREFIX'),
+            string(defaultValue: 'getupcloud/origin-ansible', description: 'openshift-ansible version', name: 'PREFIX'),
             string(defaultValue: 'v3.9', description: 'openshift-ansible version', name: 'OS_TAG'),
             string(defaultValue: 'v3.9', description: 'openshift-ansible version', name: 'OS_PUSH_TAG'),
 
