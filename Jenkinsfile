@@ -35,7 +35,7 @@ node('docker-slave'){
 
             stage ('Push Image'){
                 
-              withDockerRegistry([credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/']) {
+              withDockerRegistry([credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/']) {
                 sh """
                     cd openshift-ansible-openshift-ansible-${VERSION}/
                    ./hack/push-release.sh
