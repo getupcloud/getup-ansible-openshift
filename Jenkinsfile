@@ -12,7 +12,7 @@ node('docker-slave') {
             stage('Build Image') {
                 sh """
                     curl -OL https://github.com/openshift/openshift-ansible/archive/openshift-ansible-${VERSION}.tar.gz
-                    tar xzvf openshift-ansible-${VERSION}.tar.gz
+                    tar -xzvf openshift-ansible-${VERSION}.tar.gz
                     cd openshift-ansible-openshift-ansible-${VERSION}/
                     ./hack/build-images.sh
                 """
